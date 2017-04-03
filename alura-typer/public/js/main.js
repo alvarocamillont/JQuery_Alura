@@ -65,8 +65,7 @@ function inicializaMarcadores() {
     var frase = $(".frase").text()
     campo.on("input", function () {
         var digitado = campo.val()
-        var comparavel = frase.substr(0, digitado.length)
-        if (digitado == comparavel) {
+        if (frase.startsWith(digitado)) {
             campo.addClass("borda-verde")
             campo.removeClass("borda-vermelha")
         } else {
