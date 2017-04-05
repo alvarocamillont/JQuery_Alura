@@ -1,4 +1,4 @@
-var campo = $(".campo-digitacao");
+var campo = $(".campo-digitacao")
 var tempoInicial = $("#tempo-digitacao").text();
 
 $(function(){
@@ -35,9 +35,8 @@ function inicializaCronometro() {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
             if (tempoRestante < 1) {
-                campo.attr("disabled", true);
                 clearInterval(cronometroID);
-                campo.toggleClass("campo-desativado");
+                finalizaJogo()
             }
         }, 1000);
     });
@@ -71,3 +70,11 @@ function reiniciaJogo() {
     campo.removeClass("borda-vermelha");
     campo.removeClass("borda-verde");
 };
+
+
+function finalizaJogo() {
+    campo.attr("disabled", true);
+    campo.toggleClass("campo-desativado");
+    inserePlacar();
+}
+
