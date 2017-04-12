@@ -3,11 +3,16 @@
 $('#botao-frase').click(fraseAleatoria)
 
 function fraseAleatoria () {
-  $.get('http://localhost:3000/frasesd', trocaFraseAleatoria) // TODO TESTE
+  $('#spinner').fadeToggle(2000)
+
+  $.get('http://localhost:3000/frases', trocaFraseAleatoria) // TODO TESTE
   .fail(function (data) {
-    $('#erro').fadeToggle(2000, function (params) {
+    $('#erro').fadeToggle(2000, function () {
       $(this).fadeToggle(2000)
     })
+  })
+  .always(function () {
+    $('#spinner').toggle()
   })
 }
 
