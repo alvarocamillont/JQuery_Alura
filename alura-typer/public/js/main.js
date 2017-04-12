@@ -79,7 +79,7 @@ function finalizaJogo () {
   inserePlacar()
 }
 
-function atualizaTempoInicial(tempo) {
-    tempoInicial = tempo;
-    $("#tempo-digitacao").text(tempo);
+function atualizaTempoInicial (tempo) {
+  tempoInicial = tempo
+  $('#tempo-digitacao').text(tempo)
 }
