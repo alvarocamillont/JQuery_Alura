@@ -1,8 +1,9 @@
-/* global $  inserePlacar */
+/* global $  inserePlacar fraseAleatoria */
 var campo = $('.campo-digitacao')
 var tempoInicial = $('#tempo-digitacao').text()
 
 $(function () {
+  fraseAleatoria()
   atualizaTamanhoFrase()
   inicializaContadores()
   inicializaCronometro()
