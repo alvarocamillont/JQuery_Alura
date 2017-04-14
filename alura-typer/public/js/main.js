@@ -10,9 +10,14 @@ $(function () {
   inicializaMarcadores()
   $('#botao-reiniciar').click(reiniciaJogo)
   atualizaPlacar()
+  // Utilizando o input
   $('#usuarios').selectize({
     create: true,
     sortField: 'text'
+  })
+  // Tooltip da sincronização
+  $('.tooltip').tooltipster({
+    trigger: 'custom'
   })
 })
 
