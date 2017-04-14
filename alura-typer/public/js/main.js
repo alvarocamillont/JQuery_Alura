@@ -1,4 +1,4 @@
-/* global $  inserePlacar fraseAleatoria */
+/* global $  inserePlacar fraseAleatoria  atualizaPlacar */
 var campo = $('.campo-digitacao')
 var tempoInicial = $('#tempo-digitacao').text()
 
@@ -9,6 +9,7 @@ $(function () {
   inicializaCronometro()
   inicializaMarcadores()
   $('#botao-reiniciar').click(reiniciaJogo)
+  atualizaPlacar()
 })
 
 function atualizaTamanhoFrase () {
@@ -83,3 +84,5 @@ function atualizaTempoInicial (tempo) {
   tempoInicial = tempo
   $('#tempo-digitacao').text(tempo)
 }
+
+
